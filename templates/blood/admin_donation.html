@@ -2,20 +2,42 @@
 {% block content %}
 {% load widget_tweaks %}
 {%load static%}
+
 <head>
     <style>
         .label {
-     color: white;
-     padding: 8px;
-   }
-   
-   .success {background-color: #4CAF50;} /* Green */
-   .info {background-color: #2196F3;} /* Blue */
-   .warning {background-color: #ff9800;} /* Orange */
-   .danger {background-color: #f44336;} /* Red */
-   .other {background-color: #e7e7e7; color: black;} /* Gray */
+            color: white;
+            padding: 8px;
+        }
+
+        .success {
+            background-color: #4CAF50;
+        }
+
+        /* Green */
+        .info {
+            background-color: #2196F3;
+        }
+
+        /* Blue */
+        .warning {
+            background-color: #ff9800;
+        }
+
+        /* Orange */
+        .danger {
+            background-color: #f44336;
+        }
+
+        /* Red */
+        .other {
+            background-color: #e7e7e7;
+            color: black;
+        }
+
+        /* Gray */
     </style>
-   </head>
+</head>
 <br><br>
 <div class="container">
     <H4 class="text-center">BLOOD DONATION DETAILS</H4><br>
@@ -44,26 +66,24 @@
                 <td>{{t.status}}</td>
                 {% if t.status == 'Pending' %}
                 <td class="text-right">
-                    <button class="btn btn-primary badge-pill" style="width: 100px;"><a  style="text-decoration: none;color: white;" href="{% url 'approve-donation' t.id  %}">APPROVE</a> </button>
-                    <button class="btn btn-danger badge-pill" style="width: 80px;"><a  style="text-decoration: none;color: white;" href="{% url 'reject-donation' t.id  %}">REJECT</a> </button>
+                    <button class="btn btn-primary badge-pill" style="width: 100px;"><a
+                            style="text-decoration: none;color: white;"
+                            href="{% url 'approve-donation' t.id  %}">APPROVE</a> </button>
+                    <button class="btn btn-danger badge-pill" style="width: 80px;"><a
+                            style="text-decoration: none;color: white;"
+                            href="{% url 'reject-donation' t.id  %}">REJECT</a> </button>
                 </td>
-                {% elif  t.status == 'Approved' %}
+                {% elif t.status == 'Approved' %}
                 <td><span class="label warning">{{t.unit}} Unit Added To Stock</span></td>
 
                 {% else %}
-                <td><span class="label danger">0 Unit Added To Stock</span></td> 
+                <td><span class="label danger">0 Unit Added To Stock</span></td>
                 {% endif %}
             </tr>
             {% endfor %}
 
         </tbody>
-    
+
     </table>
 </div>
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
-
 {% endblock content %}

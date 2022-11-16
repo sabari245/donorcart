@@ -2,20 +2,42 @@
 {% block content %}
 {% load widget_tweaks %}
 {%load static%}
+
 <head>
     <style>
         .label {
-     color: white;
-     padding: 8px;
-   }
-   
-   .success {background-color: #4CAF50;} /* Green */
-   .info {background-color: #2196F3;} /* Blue */
-   .warning {background-color: #ff9800;} /* Orange */
-   .danger {background-color: #f44336;} /* Red */
-   .other {background-color: #e7e7e7; color: black;} /* Gray */
+            color: white;
+            padding: 8px;
+        }
+
+        .success {
+            background-color: #4CAF50;
+        }
+
+        /* Green */
+        .info {
+            background-color: #2196F3;
+        }
+
+        /* Blue */
+        .warning {
+            background-color: #ff9800;
+        }
+
+        /* Orange */
+        .danger {
+            background-color: #f44336;
+        }
+
+        /* Red */
+        .other {
+            background-color: #e7e7e7;
+            color: black;
+        }
+
+        /* Gray */
     </style>
-   </head>
+</head>
 <br><br>
 <div class="container">
     <H4 class="text-center">My Donation History</H4><br>
@@ -28,41 +50,37 @@
                 <th scope="col">Unit</th>
                 <th scope="col">Date</th>
                 <th scope="col">Status</th>
-                
+
             </tr>
         </thead>
         <tbody>
             {% for t in donations %}
             <tr>
-                
-                
+
+
                 <td>{{t.age}}</td>
                 <td> {{t.disease}}</td>
-                
+
                 <td>{{t.bloodgroup}}</td>
                 <td>{{t.unit}}</td>
                 <td>{{t.date}}</td>
                 {% if t.status == 'Approved' %}
                 <td><span class="label warning"> Approved</span></td>
-                
+
                 {% elif t.status == 'Rejected' %}
                 <td><span class="label success">Rejected</span></td>
                 {% else %}
                 <td><span style="color: white;margin-left: 0px;" class="label info">Pending</span></td>
                 {% endif %}
-                
+
 
             </tr>
             {% endfor %}
 
         </tbody>
-    
+
     </table>
 </div>
 
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
+
 {% endblock content %}

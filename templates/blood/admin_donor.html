@@ -24,22 +24,22 @@
                 <td>{{t.bloodgroup}}</td>
                 <td>{{t.address}}</td>
                 <td>{{t.mobile}}</td>
-                
+
                 <td class="text-right">
-                    <button class="btn btn-primary badge-pill" style="width: 80px;"><a  style="text-decoration: none;color: white;" href="{% url 'update-donor' t.id  %}">EDIT</a> </button>
-                    <button class="btn btn-danger badge-pill" style="width: 80px;"><a  style="text-decoration: none;color: white;" href="{% url 'delete-donor' t.id  %}">DELETE</a> </button>
+                    <button class="btn btn-primary badge-pill" style="width: 80px;"><a
+                            style="text-decoration: none;color: white;" href="{% url 'update-donor' t.id  %}">EDIT</a>
+                    </button>
+                    <button class="btn btn-danger badge-pill" style="width: 80px;"><a
+                            style="text-decoration: none;color: white;" href="{% url 'delete-donor' t.id  %}">DELETE</a>
+                    </button>
                 </td>
             </tr>
             {% endfor %}
 
         </tbody>
-    
+
     </table>
 </div>
 
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
+
 {% endblock content %}

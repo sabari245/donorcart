@@ -22,6 +22,10 @@
       font-family: sans-serif;
 
     }
+
+    .nv {
+      background-color: white;
+    }
   </style>
 </head>
 
@@ -30,8 +34,31 @@
 
 
   <div class="bs-example">
-    <nav style="background-color: #FF0018;" class="navbar navbar-expand-md navbar-dark fixed-top">
-      <a href="/" class="navbar-brand"><i class="fas fa-heartbeat"></i>&nbsp; Blood Bank Management</a>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar w/ text</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          Navbar text with an inline element
+        </span>
+      </div>
+    </nav> -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top nv">
+      <a href="/" style="color: #ff2200" class="navbar-brand"><i class="fas fa-heartbeat"></i>&nbsp; Donor Cart</a>
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -40,21 +67,23 @@
 
 
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" style="color: white;" href="/"><i class="fas fa-home"></i>&nbsp; Home</i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" style="color: white;" href="/patient/patientlogin"><i class="fas fa-procedures"></i>&nbsp; Patient</i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" style="color: white;" href="/donor/donorlogin"><i class="fas fa-user"></i>&nbsp; Donor</i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" style="color: white;" href="/adminlogin"><i class="fas fa-user-shield"></i>&nbsp; Admin</i></a>
-                </li>
-                
-            </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/"><i class="fas fa-home"></i>&nbsp; Home</i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/patient/patientlogin"><i class="fas fa-procedures"></i>&nbsp; Patient</i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/donor/donorlogin"><i class="fas fa-user"></i>&nbsp;
+                Donor</i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/adminlogin"><i class="fas fa-user-shield"></i>&nbsp;
+                Admin</i></a>
+            </li>
+
+          </ul>
         </div>
 
 
@@ -64,11 +93,7 @@
     </nav>
   </div>
 
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
+
 </body>
 
 </html>

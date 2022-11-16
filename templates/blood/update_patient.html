@@ -2,17 +2,19 @@
 {% block content %}
 {% load widget_tweaks %}
 {%load static%}
-<head>
-        <!-- Font special for pages-->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
-        <!-- Main CSS-->
-    
-        <link href="{% static "css/main.css" %}"rel="stylesheet" media="all">
+<head>
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+
+    <!-- Main CSS-->
+
+    <link href="{% static " css/main.css" %}"rel="stylesheet" media="all">
 </head>
 <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
     <div class="wrapper wrapper--w790">
-      
+
         <div class="card card-5">
             <div class="card-heading">
                 <h2 class="title">Update Patient</h2>
@@ -25,7 +27,7 @@
                         <div class="name">First Name</div>
                         <div class="value">
                             <div class="input-group">
-                                {% render_field userForm.first_name|attr:'required:true'  class="input--style-5"  %}
+                                {% render_field userForm.first_name|attr:'required:true' class="input--style-5" %}
                             </div>
                         </div>
                     </div>
@@ -34,7 +36,7 @@
                         <div class="name">Last Name</div>
                         <div class="value">
                             <div class="input-group">
-                                {% render_field userForm.last_name|attr:'required:true'  class="input--style-5"  %}
+                                {% render_field userForm.last_name|attr:'required:true' class="input--style-5" %}
                             </div>
                         </div>
                     </div>
@@ -43,7 +45,7 @@
                         <div class="name">Username</div>
                         <div class="value">
                             <div class="input-group">
-                                {% render_field userForm.username|attr:'required:true'  class="input--style-5"  %}
+                                {% render_field userForm.username|attr:'required:true' class="input--style-5" %}
                             </div>
                         </div>
                     </div>
@@ -52,7 +54,7 @@
                         <div class="name">Password</div>
                         <div class="value">
                             <div class="input-group">
-                                {% render_field userForm.password|attr:'required:true'  class="input--style-5"  %}
+                                {% render_field userForm.password|attr:'required:true' class="input--style-5" %}
                             </div>
                         </div>
                     </div>
@@ -61,7 +63,7 @@
                         <div class="name">Age</div>
                         <div class="value">
                             <div class="input-group">
-                                {% render_field patientForm.age|attr:'required:true'  class="input--style-5"  %}
+                                {% render_field patientForm.age|attr:'required:true' class="input--style-5" %}
                             </div>
                         </div>
                     </div>
@@ -94,7 +96,7 @@
                         <div class="name">Disease(if any)</div>
                         <div class="value">
                             <div class="input-group">
-                                {% render_field patientForm.disease|attr:'required:true'  class="input--style-5"  %}
+                                {% render_field patientForm.disease|attr:'required:true' class="input--style-5" %}
                             </div>
                         </div>
                     </div>
@@ -103,7 +105,7 @@
                         <div class="name">Doctor</div>
                         <div class="value">
                             <div class="input-group">
-                                {% render_field patientForm.doctorname|attr:'required:true'  class="input--style-5"  %}
+                                {% render_field patientForm.doctorname|attr:'required:true' class="input--style-5" %}
                             </div>
                         </div>
                     </div>
@@ -112,7 +114,7 @@
                         <div class="name">Address</div>
                         <div class="value">
                             <div class="input-group">
-                                {% render_field patientForm.address|attr:'required:true'  class="input--style-5"  %}
+                                {% render_field patientForm.address|attr:'required:true' class="input--style-5" %}
                             </div>
                         </div>
                     </div>
@@ -121,7 +123,7 @@
                         <div class="name">Mobile</div>
                         <div class="value">
                             <div class="input-group">
-                                {% render_field patientForm.mobile|attr:'required:true'  class="input--style-5"  %}
+                                {% render_field patientForm.mobile|attr:'required:true' class="input--style-5" %}
                             </div>
                         </div>
                     </div>
@@ -130,7 +132,7 @@
                         <div class="name">Profile Pic</div>
                         <div class="value">
                             <div class="input-group">
-                                {% render_field patientForm.profile_pic|attr:'required:true'  class="input--style-5"  %}
+                                {% render_field patientForm.profile_pic|attr:'required:true' class="input--style-5" %}
                             </div>
                         </div>
                     </div>
@@ -142,15 +144,11 @@
                     </div>
                 </form>
                 <br>
-                
+
 
             </div>
         </div>
     </div>
 </div>
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
+
 {% endblock content %}
