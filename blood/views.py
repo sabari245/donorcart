@@ -15,6 +15,9 @@ from patient import forms as pforms
 import os
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def send_email(to_email, subject, message):
@@ -37,8 +40,7 @@ def send_email(to_email, subject, message):
         subject=subject,
         html_content=message)
     try:
-        sg = SendGridAPIClient(
-            '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')
+        sg = SendGridAPIClient(os.getenv('SENDGRID_API_KEY'))
         response = sg.send(message)
         print(response.status_code)
         print(response.body)
