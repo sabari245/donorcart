@@ -12,24 +12,38 @@ from donor import models as dmodels
 from patient import models as pmodels
 from donor import forms as dforms
 from patient import forms as pforms
+import os
 from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import (Mail, Attachment, FileContent, FileName, FileType, Disposition)
+from sendgrid.helpers.mail import Mail
 
 
 def send_email(to_email,subject,message):
+    # message = Mail(
+    #     from_email='email@mail.com',
+    #     to_emails=to_email,
+    #     subject=subject,
+    #     html_content=message)
+    # try:
+    #     sg = SendGridAPIClient('<SENDGRID_API_KEY>')
+    #     response = sg.send(message)
+    #     print(response.status_code)
+    #     print(response.body)
+    #     print(response.headers)
+    # except Exception as e:
+    #     print(e)
     message = Mail(
-        from_email='email@mail.com',
+        from_email='sabari.h.dev@gmail.com',
         to_emails=to_email,
         subject=subject,
         html_content=message)
     try:
-        sg = SendGridAPIClient('<SENDGRID_API_KEY>')
+        sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
         response = sg.send(message)
         print(response.status_code)
         print(response.body)
         print(response.headers)
     except Exception as e:
-        print(e)
+        print(e.message)
 
 def home_view(request):
     x=models.Stock.objects.all()
