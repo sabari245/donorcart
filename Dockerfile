@@ -1,15 +1,19 @@
 FROM python:3.8
 
+RUN apt-get update
+
+RUN mkdir /app
+
 WORKDIR /app
 
-ADD . /app
-
-COPY ./requirements.txt /app/requirements.txt
+COPY . /app
 
 RUN pip install -r requirements.txt
-
-COPY . /app
 
 RUN python manage.py makemigrations
 
 RUN python manage.py migrate
+
+EXPOSE 8000
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
